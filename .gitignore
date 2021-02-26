@@ -1,0 +1,6 @@
+imagenet10
+.idea
+venv
+*.docx
+.vscode
+.DS_Store
