@@ -26,10 +26,9 @@ class CNNModel(nn.Module):
                                      nn.ReLU(),
                                      nn.MaxPool2d(kernel_size=3, stride=2))
         self.avg_pool = nn.AdaptiveAvgPool2d((7, 7))
-        self.classifier = nn.Sequential(nn.Linear(256 * 7 * 7,
-                                                  1024), nn.ReLU(),
-                                        nn.Linear(1024, num_classes),
-                                        nn.Softmax())
+        self.classifier = nn.Sequential(nn.Linear(256 * 7 * 7, 1024),
+                                        nn.ReLU(), nn.Dropout(),
+                                        nn.Linear(1024, num_classes))
 
     def forward(self, x):
         x = self.feature(x)

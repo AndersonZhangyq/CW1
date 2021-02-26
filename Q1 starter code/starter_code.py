@@ -160,6 +160,7 @@ def q1_1_fc():
     print("save loss")
     torch.save(val_loss, os.path.join(output_path, "val_loss"))
     torch.save(train_loss, os.path.join(output_path, "train_loss"))
+    writer.close()
 
 
 def q1_1_cnn():
@@ -224,6 +225,7 @@ def q1_1_cnn():
     print("save loss")
     torch.save(val_loss, os.path.join(output_path, "cnn_val_loss"))
     torch.save(train_loss, os.path.join(output_path, "cnn_train_loss"))
+    writer.close()
 
 
 def q1_2():
@@ -234,7 +236,7 @@ def q1_2():
 
     # define loss and optim
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(net.parameters())
+    optimizer = optim.Adam(net.parameters(), amsgrad=True, weight_decay=1e-5)
 
     device = torch.device('cpu')
     # use gpu if available
@@ -245,9 +247,11 @@ def q1_2():
         device = torch.device('cuda')
 
     # training code
-    epoch_num = 100
+    epoch_num = 60
     train_loss = []
     val_loss = []
+    train_acc = []
+    val_acc = []
     step = 0
     for epoch_idx in range(epoch_num):
         tmp = 0
@@ -272,10 +276,10 @@ def q1_2():
                               loss.cpu().detach(), step)
             step += 1
         train_loss.append(tmp.numpy().item() / len(train_loader))
-        writer.add_scalar(
-            "acc/train",
-            accuracy(torch.cat(train_label_pred), torch.cat(train_label_gt))[0],
-            epoch_idx)
+        train_acc.append(
+            accuracy(torch.cat(train_label_pred),
+                     torch.cat(train_label_gt))[0])
+        writer.add_scalar("acc/train", train_acc[-1], epoch_idx)
         writer.add_scalar("Loss/train", tmp / len(train_loader), epoch_idx)
 
         # validation
@@ -291,19 +295,23 @@ def q1_2():
                 tmp += loss.cpu().detach()
                 val_label_gt.append(val_label.cpu())
                 val_label_pred.append(outputs.cpu().detach())
-            writer.add_scalar(
-                "acc/train",
-                accuracy(torch.cat(val_label_pred), torch.cat(val_label_gt))[0],
-                epoch_idx)
+            val_acc.append(
+                accuracy(torch.cat(val_label_pred),
+                         torch.cat(val_label_gt))[0])
+            writer.add_scalar("acc/val", val_acc[-1], epoch_idx)
             writer.add_scalar("Loss/val", tmp / len(valid_loader), epoch_idx)
             val_loss.append(tmp.numpy().item() / len(valid_loader))
         print(
-            f"Train Epoch({epoch_idx + 1} / {epoch_num}), train_loss: {train_loss[-1]}, val_loss: {val_loss[-1]}"
+            f"Train Epoch({epoch_idx + 1} / {epoch_num}), train_loss: {train_loss[-1]}, val_loss: {val_loss[-1]}, train_acc: {train_acc[-1]:.3f}%, val_acc: {val_acc[-1]:.3f}%"
         )
 
     print("save loss")
     torch.save(val_loss, os.path.join(output_path, "cnn_val_loss"))
     torch.save(train_loss, os.path.join(output_path, "cnn_train_loss"))
+    print("save acc")
+    torch.save(val_acc, os.path.join(output_path, "cnn_val_acc"))
+    torch.save(train_acc, os.path.join(output_path, "cnn_train_acc"))
+    writer.close()
 
 
 # q1_1_fc()
