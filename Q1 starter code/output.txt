@@ -1,0 +1,158 @@
+Found 9000 images.
+                                                path  class
+0    imagenet10/train_set/orange/n07747607_5992.JPEG      9
+1  imagenet10/train_set/football/n04254680_1295.JPEG      7
+2  imagenet10/train_set/dumbbell/n03255030_10398....      6
+3     imagenet10/train_set/canoe/n02951358_7238.JPEG      2
+4    imagenet10/train_set/orange/n07747607_3775.JPEG      9
+len(dataset_train) 7200
+len(dataset_valid) 1800
+len(train_loader) 113
+len(valid_loader) 15
+using gpu
+Train Epoch(1 / 40), train_loss: 2.4728212356567383, val_loss: 13.661456298828124
+Train Epoch(2 / 40), train_loss: 4.065373420715332, val_loss: 16.218922932942707
+Train Epoch(3 / 40), train_loss: 3.1054937839508057, val_loss: 18.257157389322916
+Train Epoch(4 / 40), train_loss: 1.9964358806610107, val_loss: 19.48900146484375
+Train Epoch(5 / 40), train_loss: 0.6504093408584595, val_loss: 18.260601806640626
+Train Epoch(6 / 40), train_loss: 0.062444813549518585, val_loss: 19.120694986979167
+Train Epoch(7 / 40), train_loss: 0.015446153469383717, val_loss: 19.916202799479166
+Train Epoch(8 / 40), train_loss: 0.07179948687553406, val_loss: 20.26437784830729
+Train Epoch(9 / 40), train_loss: 0.010449342429637909, val_loss: 22.439225260416666
+Train Epoch(10 / 40), train_loss: 0.004031789023429155, val_loss: 22.722896321614584
+Train Epoch(11 / 40), train_loss: 0.006319127976894379, val_loss: 25.358487955729167
+Train Epoch(12 / 40), train_loss: 0.012048020027577877, val_loss: 25.195878092447916
+Train Epoch(13 / 40), train_loss: 0.0031350008212029934, val_loss: 25.467753092447918
+Train Epoch(14 / 40), train_loss: 0.001518244738690555, val_loss: 26.39918212890625
+Train Epoch(15 / 40), train_loss: 0.0020175036042928696, val_loss: 26.952530924479166
+Train Epoch(16 / 40), train_loss: 0.004497515968978405, val_loss: 27.30373738606771
+Train Epoch(17 / 40), train_loss: 0.005205377005040646, val_loss: 28.794557698567708
+Train Epoch(18 / 40), train_loss: 0.0022872891277074814, val_loss: 31.523063151041665
+Train Epoch(19 / 40), train_loss: 0.0017105410806834698, val_loss: 28.91734415690104
+Train Epoch(20 / 40), train_loss: 0.001231483998708427, val_loss: 30.43699747721354
+Train Epoch(21 / 40), train_loss: 0.000760367140173912, val_loss: 30.77824503580729
+Train Epoch(22 / 40), train_loss: 0.00047466711839661, val_loss: 30.917765299479168
+Train Epoch(23 / 40), train_loss: 0.0003369185724295676, val_loss: 31.376729329427082
+Train Epoch(24 / 40), train_loss: 0.00027182887424714863, val_loss: 31.784844970703126
+Train Epoch(25 / 40), train_loss: 0.00023599040287081152, val_loss: 31.70511474609375
+Train Epoch(26 / 40), train_loss: 0.00021043485321570188, val_loss: 32.803444417317706
+Train Epoch(27 / 40), train_loss: 0.0001880773197626695, val_loss: 31.90885213216146
+Train Epoch(28 / 40), train_loss: 0.0001668415206950158, val_loss: 32.91158854166667
+Train Epoch(29 / 40), train_loss: 0.0001465535315219313, val_loss: 33.074639892578126
+Train Epoch(30 / 40), train_loss: 0.00012762544793076813, val_loss: 32.17390747070313
+Train Epoch(31 / 40), train_loss: 0.0001104506736737676, val_loss: 32.84042154947917
+Train Epoch(32 / 40), train_loss: 9.527410293230787e-05, val_loss: 33.85282796223958
+Train Epoch(33 / 40), train_loss: 8.213693217840046e-05, val_loss: 33.31711018880208
+Train Epoch(34 / 40), train_loss: 7.093910971889272e-05, val_loss: 34.55335286458333
+Train Epoch(35 / 40), train_loss: 6.15207536611706e-05, val_loss: 33.046067301432295
+Train Epoch(36 / 40), train_loss: 5.365085962694138e-05, val_loss: 35.76161295572917
+Train Epoch(37 / 40), train_loss: 4.712964073405601e-05, val_loss: 34.5580810546875
+Train Epoch(38 / 40), train_loss: 4.173833440290764e-05, val_loss: 33.361863199869795
+Train Epoch(39 / 40), train_loss: 3.729887612280436e-05, val_loss: 35.112605794270834
+Train Epoch(40 / 40), train_loss: 3.363669748068787e-05, val_loss: 33.209710693359376
+save loss
+using gpu
+Train Epoch(1 / 40), train_loss: 2.309011459350586, val_loss: 3.0978159586588543
+Train Epoch(2 / 40), train_loss: 2.472960948944092, val_loss: 2.3982808430989584
+Train Epoch(3 / 40), train_loss: 2.3074023723602295, val_loss: 2.257355499267578
+Train Epoch(4 / 40), train_loss: 2.1659605503082275, val_loss: 2.200761159261068
+Train Epoch(5 / 40), train_loss: 2.0756492614746094, val_loss: 2.187672170003255
+Train Epoch(6 / 40), train_loss: 1.8763490915298462, val_loss: 2.2265655517578127
+Train Epoch(7 / 40), train_loss: 1.679426670074463, val_loss: 2.2491025288899738
+Train Epoch(8 / 40), train_loss: 1.4807755947113037, val_loss: 2.4638036092122397
+Train Epoch(9 / 40), train_loss: 1.1833230257034302, val_loss: 2.834918467203776
+Train Epoch(10 / 40), train_loss: 1.0149232149124146, val_loss: 3.308813222249349
+Train Epoch(11 / 40), train_loss: 1.063179850578308, val_loss: 3.6600011189778647
+Train Epoch(12 / 40), train_loss: 0.8188109397888184, val_loss: 4.59659678141276
+Train Epoch(13 / 40), train_loss: 0.946179986000061, val_loss: 3.908438873291016
+Train Epoch(14 / 40), train_loss: 0.6539185047149658, val_loss: 4.218883005777995
+Train Epoch(15 / 40), train_loss: 0.8746004700660706, val_loss: 4.101963551839193
+Train Epoch(16 / 40), train_loss: 0.7699527740478516, val_loss: 3.8490829467773438
+Train Epoch(17 / 40), train_loss: 0.5513250827789307, val_loss: 3.9815821329752605
+Train Epoch(18 / 40), train_loss: 0.4791819453239441, val_loss: 4.253876749674479
+Train Epoch(19 / 40), train_loss: 0.49255993962287903, val_loss: 4.229708862304688
+Train Epoch(20 / 40), train_loss: 0.34148603677749634, val_loss: 4.0853828430175785
+Train Epoch(21 / 40), train_loss: 0.3995177447795868, val_loss: 4.211397043863932
+Train Epoch(22 / 40), train_loss: 0.30360281467437744, val_loss: 4.162183125813802
+Train Epoch(23 / 40), train_loss: 0.3215734362602234, val_loss: 4.191937764485677
+Train Epoch(24 / 40), train_loss: 0.29408469796180725, val_loss: 4.288291422526042
+Train Epoch(25 / 40), train_loss: 0.19831204414367676, val_loss: 4.449510192871093
+Train Epoch(26 / 40), train_loss: 0.28005295991897583, val_loss: 4.636365254720052
+Train Epoch(27 / 40), train_loss: 0.3293570280075073, val_loss: 4.445796712239583
+Train Epoch(28 / 40), train_loss: 0.12153249979019165, val_loss: 4.682071940104167
+Train Epoch(29 / 40), train_loss: 0.05035179480910301, val_loss: 5.2947443644205725
+Train Epoch(30 / 40), train_loss: 0.14781327545642853, val_loss: 5.51108144124349
+Train Epoch(31 / 40), train_loss: 0.2271271049976349, val_loss: 5.237567647298177
+Train Epoch(32 / 40), train_loss: 0.10600116848945618, val_loss: 5.674913533528646
+Train Epoch(33 / 40), train_loss: 0.07438234239816666, val_loss: 5.897166951497396
+Train Epoch(34 / 40), train_loss: 0.22835764288902283, val_loss: 5.79860585530599
+Train Epoch(35 / 40), train_loss: 0.026400798931717873, val_loss: 5.975574747721354
+Train Epoch(36 / 40), train_loss: 0.04329166188836098, val_loss: 5.408295186360677
+Train Epoch(37 / 40), train_loss: 0.07375520467758179, val_loss: 5.461549377441406
+Train Epoch(38 / 40), train_loss: 0.027410896494984627, val_loss: 5.685749308268229
+Train Epoch(39 / 40), train_loss: 0.016789717599749565, val_loss: 5.714481099446615
+Train Epoch(40 / 40), train_loss: 0.044151823967695236, val_loss: 5.862729390462239
+save loss
+using gpu
+Train Epoch(1 / 60), train_loss: 1.9426581458707826, val_loss: 1.7192274729410808, train_acc: 29.306%, val_acc: 39.889%
+Train Epoch(2 / 60), train_loss: 1.5832817955354674, val_loss: 1.4693926493326823, train_acc: 44.944%, val_acc: 50.056%
+Train Epoch(3 / 60), train_loss: 1.3907678654763551, val_loss: 1.3928115844726563, train_acc: 51.958%, val_acc: 54.111%
+Train Epoch(4 / 60), train_loss: 1.2369908695727323, val_loss: 1.2782923380533855, train_acc: 58.944%, val_acc: 56.667%
+Train Epoch(5 / 60), train_loss: 1.1280662064003733, val_loss: 1.2845184326171875, train_acc: 62.028%, val_acc: 57.167%
+Train Epoch(6 / 60), train_loss: 1.0151627802215846, val_loss: 1.202621587117513, train_acc: 64.903%, val_acc: 59.389%
+Train Epoch(7 / 60), train_loss: 0.9117716561376521, val_loss: 1.152896245320638, train_acc: 69.125%, val_acc: 62.278%
+Train Epoch(8 / 60), train_loss: 0.8212915606203333, val_loss: 1.1018494923909505, train_acc: 72.542%, val_acc: 63.444%
+Train Epoch(9 / 60), train_loss: 0.7431334774051093, val_loss: 1.0938908894856771, train_acc: 74.750%, val_acc: 64.611%
+Train Epoch(10 / 60), train_loss: 0.6390900063303719, val_loss: 1.146083450317383, train_acc: 78.028%, val_acc: 63.944%
+Train Epoch(11 / 60), train_loss: 0.5511507692590224, val_loss: 1.2773815155029298, train_acc: 81.333%, val_acc: 64.556%
+Train Epoch(12 / 60), train_loss: 0.4600044858139173, val_loss: 1.18218994140625, train_acc: 84.333%, val_acc: 65.833%
+Train Epoch(13 / 60), train_loss: 0.3830011418435426, val_loss: 1.2342784881591797, train_acc: 87.083%, val_acc: 65.944%
+Train Epoch(14 / 60), train_loss: 0.3173495267344787, val_loss: 1.2798084259033202, train_acc: 88.931%, val_acc: 67.000%
+Train Epoch(15 / 60), train_loss: 0.2703891686633625, val_loss: 1.3320541381835938, train_acc: 90.792%, val_acc: 66.611%
+Train Epoch(16 / 60), train_loss: 0.22229986275191857, val_loss: 1.4208689371744792, train_acc: 92.639%, val_acc: 66.444%
+Train Epoch(17 / 60), train_loss: 0.21190957263507673, val_loss: 1.419750722249349, train_acc: 92.889%, val_acc: 66.722%
+Train Epoch(18 / 60), train_loss: 0.17223770006568032, val_loss: 1.6703427632649739, train_acc: 94.431%, val_acc: 65.667%
+Train Epoch(19 / 60), train_loss: 0.18293181562845687, val_loss: 1.5943616231282551, train_acc: 93.944%, val_acc: 65.389%
+Train Epoch(20 / 60), train_loss: 0.14174230119823356, val_loss: 1.621902338663737, train_acc: 95.361%, val_acc: 66.222%
+Train Epoch(21 / 60), train_loss: 0.12424511192119227, val_loss: 1.6105931599934895, train_acc: 96.042%, val_acc: 67.056%
+Train Epoch(22 / 60), train_loss: 0.10555572847349454, val_loss: 1.660534922281901, train_acc: 96.514%, val_acc: 67.667%
+Train Epoch(23 / 60), train_loss: 0.09331184150898351, val_loss: 1.686911900838216, train_acc: 97.264%, val_acc: 67.944%
+Train Epoch(24 / 60), train_loss: 0.09772285528942547, val_loss: 1.9339642842610678, train_acc: 97.000%, val_acc: 67.444%
+Train Epoch(25 / 60), train_loss: 0.09281212460678236, val_loss: 1.9014138539632162, train_acc: 97.111%, val_acc: 65.611%
+Train Epoch(26 / 60), train_loss: 0.08260741276023663, val_loss: 1.8802291870117187, train_acc: 97.319%, val_acc: 66.667%
+Train Epoch(27 / 60), train_loss: 0.08986389531498462, val_loss: 1.768600336710612, train_acc: 97.111%, val_acc: 66.889%
+Train Epoch(28 / 60), train_loss: 0.08351785102776721, val_loss: 1.9931589762369792, train_acc: 97.500%, val_acc: 65.667%
+Train Epoch(29 / 60), train_loss: 0.06224649564354821, val_loss: 1.9296170552571614, train_acc: 98.194%, val_acc: 66.611%
+Train Epoch(30 / 60), train_loss: 0.05297123225389329, val_loss: 1.9773324330647786, train_acc: 98.389%, val_acc: 67.333%
+Train Epoch(31 / 60), train_loss: 0.07178293920196263, val_loss: 2.0881268819173178, train_acc: 97.694%, val_acc: 66.167%
+Train Epoch(32 / 60), train_loss: 0.07722662191475387, val_loss: 2.3247451782226562, train_acc: 97.514%, val_acc: 66.389%
+Train Epoch(33 / 60), train_loss: 0.0721367692525408, val_loss: 2.198805236816406, train_acc: 97.806%, val_acc: 66.778%
+Train Epoch(34 / 60), train_loss: 0.05106995591020162, val_loss: 2.317462412516276, train_acc: 98.458%, val_acc: 65.833%
+Train Epoch(35 / 60), train_loss: 0.05757644113186186, val_loss: 2.2221392313639323, train_acc: 98.167%, val_acc: 67.167%
+Train Epoch(36 / 60), train_loss: 0.060376095560799654, val_loss: 2.115533701578776, train_acc: 98.014%, val_acc: 67.611%
+Train Epoch(37 / 60), train_loss: 0.05559638538191804, val_loss: 2.0348278045654298, train_acc: 98.222%, val_acc: 67.333%
+Train Epoch(38 / 60), train_loss: 0.049871790725572976, val_loss: 2.2898737589518228, train_acc: 98.389%, val_acc: 65.389%
+Train Epoch(39 / 60), train_loss: 0.0715554920972976, val_loss: 2.0985481262207033, train_acc: 97.750%, val_acc: 65.833%
+Train Epoch(40 / 60), train_loss: 0.0642090054739893, val_loss: 2.05719108581543, train_acc: 98.014%, val_acc: 65.611%
+Train Epoch(41 / 60), train_loss: 0.04435086461295069, val_loss: 2.344618733723958, train_acc: 98.514%, val_acc: 68.111%
+Train Epoch(42 / 60), train_loss: 0.04386423330391403, val_loss: 2.282456715901693, train_acc: 98.653%, val_acc: 67.000%
+Train Epoch(43 / 60), train_loss: 0.0452819672306027, val_loss: 2.217054748535156, train_acc: 98.722%, val_acc: 65.833%
+Train Epoch(44 / 60), train_loss: 0.03269813546037252, val_loss: 2.4225135803222657, train_acc: 99.056%, val_acc: 66.111%
+Train Epoch(45 / 60), train_loss: 0.04579596814856065, val_loss: 2.364075215657552, train_acc: 98.583%, val_acc: 67.278%
+Train Epoch(46 / 60), train_loss: 0.03874012010287395, val_loss: 2.215812174479167, train_acc: 98.819%, val_acc: 67.500%
+Train Epoch(47 / 60), train_loss: 0.027158471335351996, val_loss: 2.669336700439453, train_acc: 99.181%, val_acc: 66.889%
+Train Epoch(48 / 60), train_loss: 0.031739783498038236, val_loss: 2.4634618123372394, train_acc: 99.056%, val_acc: 67.278%
+Train Epoch(49 / 60), train_loss: 0.025504302134556053, val_loss: 2.3891321818033853, train_acc: 99.194%, val_acc: 67.111%
+Train Epoch(50 / 60), train_loss: 0.026097046590484348, val_loss: 2.634077453613281, train_acc: 99.222%, val_acc: 66.778%
+Train Epoch(51 / 60), train_loss: 0.041549986442633434, val_loss: 2.1671763102213544, train_acc: 98.556%, val_acc: 66.833%
+Train Epoch(52 / 60), train_loss: 0.024666965535256716, val_loss: 2.7962933858235677, train_acc: 99.306%, val_acc: 65.889%
+Train Epoch(53 / 60), train_loss: 0.051788958828006174, val_loss: 2.5453399658203124, train_acc: 98.486%, val_acc: 66.222%
+Train Epoch(54 / 60), train_loss: 0.04927847026723676, val_loss: 2.423498026529948, train_acc: 98.375%, val_acc: 66.889%
+Train Epoch(55 / 60), train_loss: 0.030314825277412888, val_loss: 2.4747220357259114, train_acc: 99.111%, val_acc: 66.778%
+Train Epoch(56 / 60), train_loss: 0.033185406068785, val_loss: 2.3157313028971354, train_acc: 98.986%, val_acc: 67.722%
+Train Epoch(57 / 60), train_loss: 0.02716414274367611, val_loss: 2.5522783915201823, train_acc: 99.097%, val_acc: 67.167%
+Train Epoch(58 / 60), train_loss: 0.022602496948917354, val_loss: 2.629683430989583, train_acc: 99.375%, val_acc: 66.444%
+Train Epoch(59 / 60), train_loss: 0.03227304357343015, val_loss: 2.3438847859700522, train_acc: 99.125%, val_acc: 67.333%
+Train Epoch(60 / 60), train_loss: 0.02116604188902188, val_loss: 2.362859344482422, train_acc: 99.264%, val_acc: 68.167%
+save loss
+save acc

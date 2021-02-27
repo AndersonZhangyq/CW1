@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description='Explore pre-trained AlexNet')
 
 
 parser.add_argument(
-    '--image_path', type=str, default="../imagenet10/train_set/cat/n02123159_109.JPEG",
+    '--image_path', type=str, default="imagenet10/train_set/cat/n02123159_109.JPEG",
     help='Full path to the input image to load.')
 parser.add_argument(
     '--use_pre_trained', type=bool, default=True,
@@ -132,30 +132,34 @@ def extract_feature_maps(input, model):
 from torch.utils.tensorboard import SummaryWriter
 writer = SummaryWriter()
 output_path = writer.get_logdir()
-import os, math
+import os, math, random
 from torchvision import utils
 
-# visualize weight
-for idx in conv_layer_indices:
-    weight = extract_filter(idx, model)
-    n, c, h, w = weight.shape
-    weight = weight.view(n * c, -1, h, w)
-    nrow = int(math.sqrt(n * c))
-    print(h, w)
-    grid = utils.make_grid(weight, nrow=nrow, normalize=True, scale_each=True)
-    utils.save_image(weight, os.path.join(output_path, f"conv_{idx}.png"), nrow=nrow, normalize=True, scale_each=True)
-    writer.add_image("conv filter", grid, idx)
+with torch.no_grad():
+    # visualize weight
+    selected_channel = [-1, -1, -1, -1, -1]
+    for layer_idx, channel in zip(conv_layer_indices, selected_channel):
+        weight = extract_filter(layer_idx, model)
+        n, c, h, w = weight.shape
+        if channel == -1:
+            channel = random.randint(0, c - 1)
+        weight = weight[:, channel, :, :].unsqueeze(1)
+        nrow = int(math.sqrt(n))
+        print(h, w)
+        grid = utils.make_grid(weight, nrow=nrow, normalize=True, scale_each=True)
+        utils.save_image(weight, os.path.join(output_path, f"conv_{layer_idx}.png"), nrow=nrow, normalize=True, scale_each=True)
+        writer.add_image("conv filter", grid, layer_idx)
 
 
-# visualzie feature map
-feature_map = extract_feature_maps(data, model)
-for idx, fm in enumerate(feature_map):
-    n, c, h, w = fm.shape
-    fm = fm.view(n * c, -1, h, w)
-    nrow = int(math.sqrt(n * c))
-    print(h, w)
-    grid = utils.make_grid(fm, nrow=nrow, normalize=True, scale_each=True)
-    utils.save_image(fm, os.path.join(output_path, f"feature_map_{idx}.png"), nrow=nrow, normalize=True, scale_each=True)
-    writer.add_image("feature map", grid, idx)
+    # visualzie feature map
+    feature_map = extract_feature_maps(data, model)
+    for idx, fm in enumerate(feature_map):
+        n, c, h, w = fm.shape
+        fm = fm.view(n * c, -1, h, w)
+        nrow = int(math.sqrt(n * c))
+        print(h, w)
+        grid = utils.make_grid(fm, nrow=nrow, normalize=True, scale_each=True)
+        utils.save_image(fm, os.path.join(output_path, f"feature_map_{idx}.png"), nrow=nrow, normalize=True, scale_each=True)
+        writer.add_image("feature map", grid, idx)
 
 writer.close()
